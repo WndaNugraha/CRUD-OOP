@@ -64,7 +64,7 @@
                     </div>
                     <div class="form-group">
                         <label for="exampleInputEmail1">Nama Dosen</label>
-                        <input type="number" class="form-control" name="id_dosen" value="<?php echo $id_dosen; ?>">
+                        <input type="text" class="form-control" name="id_dosen" value="<?php echo $id_dosen; ?>">
                     </div>
                     <button type="submit" name="save" class="btn btn-primary">Simpan</button>
                 </form>

@@ -64,7 +64,16 @@
                     </div>
                     <div class="form-group">
                         <label for="exampleInputEmail1">Nama Dosen</label>
-                        <input type="text" class="form-control" name="id_dosen" value="<?php echo $id_dosen; ?>">
+                        <select name ="id_dosen" class="form-control">
+                        <?php
+                            $dosen =  new Dosen();
+                            $no = 1;
+                            foreach ($dosen->index() as $data){
+                        ?>
+                            <option value="<?php echo $data['id'] ?>"><?php echo $data['nama'] ?></option>
+                            <?php } ?>
+                        </select>
+                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                     </div>
                     <button type="submit" name="save" class="btn btn-primary">Simpan</button>
                 </form>
